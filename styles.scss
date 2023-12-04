@@ -1,0 +1,84 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    fill: #D9D9D9;
+    width: 375px;
+    height: 667px;
+    flex-shrink: 0;
+
+    #game-container {
+        margin: 8px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .board {
+        position: relative;
+        width: 100%;
+        height: 630px;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+
+        border-radius: 24px;
+        border: 1px solid #EC2E53;
+        background: var(--BackgroundGlass, linear-gradient(112deg, rgba(239, 239, 239, 0.60) 8.14%, rgba(239, 239, 239, 0.08) 95.69%), rgba(245, 245, 245, 0.40));
+        box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.60) inset;
+        backdrop-filter: blur(42.5px);
+    }
+
+    #game-intro {
+        margin: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    button {
+        margin: 8px;;
+        width: 100%;
+        border-radius: 24px;
+        border: 1px solid #EC2E53;
+        background: var(--BackgroundGlass, linear-gradient(112deg, rgba(239, 239, 239, 0.60) 8.14%, rgba(239, 239, 239, 0.08) 95.69%), rgba(245, 245, 245, 0.40));
+
+        /* Blur */
+        box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.60);
+        backdrop-filter: blur(42.5px);
+    }
+
+    .ball {
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+        border-radius: 48px;
+        border: 1px solid #EC2E53;
+        background: #EC2E53;
+        /* Blur */
+        box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.60);
+        backdrop-filter: blur(42.5px);
+    }
+
+    .paddle {
+        position: absolute;
+        bottom: 8px;
+        width: 170px;
+        height: 24px;
+        flex-shrink: 0;
+        border-radius: 24px;
+        border: 1px solid #EC2E53;
+        background: #EC2E53;
+
+        /* Blur */
+        box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.60);
+        backdrop-filter: blur(42.5px);
+    }
+}
