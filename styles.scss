@@ -27,7 +27,7 @@ body {
 
         .board {
             position: relative;
-            width: 100%;
+            width: 400px;
             height: 630px;
             display: flex;
             flex-direction: column;
@@ -79,7 +79,6 @@ body {
     #paddle {
         position: absolute;
         bottom: 8px;
-        width: 170px;
         height: 24px;
         flex-shrink: 0;
         border-radius: 24px;
