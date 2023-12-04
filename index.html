@@ -16,19 +16,22 @@
       </button>
     </div>
     <div id="game-container">
-      <h2>Stats</h2>
-      <p>Score: <span id="score">0</span></p>
-      <p>Lives: <span id="lives">3</span></p>
+
+      <div id="stats">
+        <h2>Stats</h2>
+        <p>Score: <span id="score">0</span></p>
+        <p>Lives: <span id="lives">3</span></p>
+      </div>
+      
       <div class="board">
         <div class="ball"></div>
-        <div class="paddle_1 paddle"></div>
+        <div class="paddle" id="paddle"></div>
       </div>
     </div>
     <div id="game-end">
       <h1>Game Over</h1>
       <button id="restart-button">Restart</button>
     </div>
-
 
     <script src="/player.js"></script>
     <script src="/game.js"></script>
