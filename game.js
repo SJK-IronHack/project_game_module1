@@ -9,6 +9,8 @@ class Game {
         this.player = null
         this.ball = new Ball(this.gameScreen)
         this.board = document.querySelector('.board');
+        this.gameScreen.style.display = 'none'
+
 
 
     }
@@ -21,10 +23,8 @@ class Game {
         this.gameScreen.style.width = `${this.width}px`
 
         this.player = new Player(this.gameScreen)
-        console.log(this.player);
         this.gameLoop()
     }
-
 
 
     gameLoop() {
@@ -33,9 +33,6 @@ class Game {
 
         if (this.ball.didCollidePaddle(this.player)) {
             this.ball.directionY = -this.ball.directionY
-        }
-        if (this.ball.didCollideWall(this.board)) {
-            this.ball.directionY = this.ball.directionY
         }
 
 

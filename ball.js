@@ -5,10 +5,11 @@ class Ball {
         this.board = document.querySelector('.board');
         this.paddle = document.getElementById('paddle')
 
-        this.boardWidth = board_coord.width;
-        this.boardHeight = board_coord.height;
+        this.boardWidth = this.board.getBoundingClientRect().width
+        this.boardHeight = this.board.getBoundingClientRect().height
 
-        this.directionY = 1
+        this.directionY = Math.random() * 2 - 1
+        this.directionX = Math.random() * 2 - 1
 
         this.paddle = document.getElementById('paddle');
         this.left = 8
@@ -21,6 +22,18 @@ class Ball {
     }
     moveBall() {
         this.top += this.directionY;
+        this.left += this.directionX;
+
+        if (this.left > this.boardWidth - 64 ||
+            this.left <= 0) {
+        this.directionX = -this.directionX
+        }
+      
+        if (this.top >= this.boardHeight - 64 ||
+            this.top <= 0) {
+        this.directionY = -this.directionY
+        }
+        console.log(this);
         this.updatePosition()
     }
     updatePosition() {
@@ -46,24 +59,16 @@ class Ball {
     }
 
     didCollideWall(board) {
-        console.log(this.element)
 
-        const playerRect = this.element.getBoundingClientRect()
-        const obstacleRect = this.board.getBoundingClientRect()
+        const ballRect = this.element.getBoundingClientRect()
+        const boardRect = this.board.getBoundingClientRect()
 
-        if (
-            playerRect.left <= obstacleRect.right &&
-            playerRect.right >= obstacleRect.left &&
-            playerRect.top <= obstacleRect.bottom &&
-            playerRect.bottom >= obstacleRect.top
-        ) {
-            return true
-        } else if (
+    if (
             //checking if outside of the board
-            playerRect.left > obstacleRect.right &&
-            playerRect.right < obstacleRect.left &&
-            playerRect.top > obstacleRect.bottom &&
-            playerRect.bottom < obstacleRect.top
+         //   ballRect.bottom > boardRect.bottom ||
+            ballRect.right >= boardRect.right ||
+            ballRect.left <= boardRect.left ||
+            ballRect.top <= boardRect.top
         ) {
             return true
         }
