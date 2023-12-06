@@ -1,6 +1,6 @@
 @font-face {
   font-family: "MaisonNeue";
-  src: url(MaisonNeue-Book.woff);
+  src: url("./MaisonNeue-Book.woff");
 }
 body {
   font-family: "MaisonNeue";
