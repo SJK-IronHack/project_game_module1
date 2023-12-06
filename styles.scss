@@ -11,7 +11,7 @@ $backdrop-filterOuter: blur(42.5px);
 
 @font-face {
     font-family: "MaisonNeue";
-    src: url('./MaisonNeue-Book.woff');
+    src: url(./MaisonNeue-Book.woff);
 }
 
 @mixin GlassMorphismInner {
