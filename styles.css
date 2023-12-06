@@ -15,6 +15,7 @@ body {
   flex-shrink: 0;
 }
 body h1 {
+  font-family: "MaisonNeue";
   font-size: 2.6rem;
   color: #EC2E53;
   color: #EC2E53;
@@ -76,6 +77,9 @@ body button {
           backdrop-filter: blur(42.5px);
   border-radius: 24px;
   border: 1px solid #EC2E53;
+  font-family: "MaisonNeue";
+  font-size: 2.6rem;
+  color: #EC2E53;
 }
 body #start-button {
   display: block;

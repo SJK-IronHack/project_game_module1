@@ -8,8 +8,6 @@ class Ball {
         this.boardWidth = this.board.getBoundingClientRect().width
         this.boardHeight = this.board.getBoundingClientRect().height
 
-        this.directionY = (Math.random() * 3 + 1)
-        this.directionX = (Math.random() * 3 + 1)
 
         this.paddle = document.getElementById('paddle');
         this.left = 8
@@ -19,8 +17,15 @@ class Ball {
 
         this.element.style.left = `${this.left}px`
         this.element.style.top = `${this.top}px`
+
+        this.level = document.getElementById('level').innerText
+
+        this.directionY = (Math.random() * this.level + 1)
+        this.directionX = (Math.random() * this.level + 1)
     }
+
     moveBall() {
+
         this.top += this.directionY;
         this.left += this.directionX;
 
