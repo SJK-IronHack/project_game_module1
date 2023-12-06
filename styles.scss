@@ -1,4 +1,5 @@
 //VARIABLE & MIXINS 
+
 $backgroundInner: var(--BackgroundGlass, linear-gradient(112deg, rgba(239, 239, 239, 0.60) 8.14%, rgba(239, 239, 239, 0.08) 95.69%), rgba(245, 245, 245, 0.40));
 $box-shadowInner: -4px -4px 4px 0px rgba(236, 46, 83, 0.60) inset;
 $backdrop-filterInner: blur(42.5px);

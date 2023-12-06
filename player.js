@@ -1,4 +1,3 @@
-
 let board = document.querySelector('.board');
 
 let paddle_coord = paddle.getBoundingClientRect();
