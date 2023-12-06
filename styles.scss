@@ -1,4 +1,48 @@
+//VARIABLE & MIXINS 
+$backgroundInner: var(--BackgroundGlass, linear-gradient(112deg, rgba(239, 239, 239, 0.60) 8.14%, rgba(239, 239, 239, 0.08) 95.69%), rgba(245, 245, 245, 0.40));
+$box-shadowInner: -4px -4px 4px 0px rgba(236, 46, 83, 0.60) inset;
+$backdrop-filterInner: blur(42.5px);
+
+
+
+$backgroundOuter: var(--BackgroundGlass, linear-gradient(112deg, rgba(239, 239, 239, 0.60) 8.14%, rgba(239, 239, 239, 0.08) 95.69%), rgba(245, 245, 245, 0.40));
+$box-shadowOuter: -4px -4px 4px 0px rgba(236, 46, 83, 0.60);
+$backdrop-filterOuter: blur(42.5px);
+
+@font-face {
+    font-family: "MaisonNeue";
+    src: url(/MaisonNeue-Book.woff);
+}
+
+@mixin GlassMorphismInner {
+    background: $backgroundInner;
+    box-shadow: $box-shadowInner;
+    backdrop-filter: $backdrop-filterInner;
+    border-radius: 24px;
+    border: 1px solid #EC2E53;
+}
+
+@mixin GkGlassMorphismOuter {
+    background: $backgroundOuter;
+    box-shadow: $box-shadowOuter;
+    backdrop-filter: $backdrop-filterOuter;
+    border-radius: 24px;
+    border: 1px solid #EC2E53;
+}
+
+@mixin h1-size {
+    font-size: 2.6rem;
+    color: #EC2E53;
+}
+
+@mixin h2-size {
+    font-size: 2.1rem;
+    color: #EC2E53;
+}
+
 body {
+    font-family: "MaisonNeue";
+
     width: 100vw;
     height: 100vh;
     margin: 0px;
@@ -10,6 +54,21 @@ body {
 
     flex-shrink: 0;
 
+    h1 {
+        @include h1-size();
+        color: #EC2E53;
+    }
+
+    #stats {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-around;
+        width: 90vw;
+        font-size: 32px;
+        @include GlassMorphismInner();
+    }
+
     #game-container {
         margin: 8px;
         display: flex;
@@ -17,54 +76,53 @@ body {
         align-items: center;
         justify-content: space-between;
 
-        #stats {
-            display: flex;
-            flex-direction: row;
-            align-items: baseline;
-            justify-content: space-around;
-            width: 100%;
-            font-size: 32px;
-        }
 
         .board {
             position: relative;
             width: 90vw;
             height: 70vh;
-            margin: 8px;;
+            margin: 8px;
+
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
 
-            border-radius: 24px;
-            border: 1px solid #EC2E53;
-            background: var(--BackgroundGlass, linear-gradient(112deg, rgba(239, 239, 239, 0.60) 8.14%, rgba(239, 239, 239, 0.08) 95.69%), rgba(245, 245, 245, 0.40));
-            box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.60) inset;
-            backdrop-filter: blur(42.5px);
+
+            @include GlassMorphismInner;
         }
     }
 
     #game-intro {
         margin: 8px;
-        width: 100%;
+        width: 90vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+
+
     }
-    #game-end{
+
+    #game-end {
         display: none;
     }
 
     button {
+
         width: 90vw;
         border-radius: 24px;
         border: 1px solid #EC2E53;
-        background: var(--BackgroundGlass, linear-gradient(112deg, rgba(239, 239, 239, 0.60) 8.14%, rgba(239, 239, 239, 0.08) 95.69%), rgba(245, 245, 245, 0.40));
-
-        /* Blur */
-        box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.60);
-        backdrop-filter: blur(42.5px);
+        @include GkGlassMorphismOuter()
     }
+
+    #start-button {
+        display: block;
+    }
+
+    #restart-button {
+        display: none;
+    }
+
 
     #ball {
         position: absolute;
@@ -73,10 +131,8 @@ body {
         height: 48px;
         border-radius: 48px;
         border: 1px solid #EC2E53;
+        @include GkGlassMorphismOuter();
         background: #EC2E53;
-        /* Blur */
-        box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.60);
-        backdrop-filter: blur(42.5px);
     }
 
     #paddle {
@@ -86,12 +142,9 @@ body {
         height: 24px;
         width: 170px;
         flex-shrink: 0;
-        border-radius: 24px;
+        @include GkGlassMorphismOuter();
         border: 1px solid #EC2E53;
         background: #EC2E53;
 
-        /* Blur */
-        box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.60);
-        backdrop-filter: blur(42.5px);
     }
 }

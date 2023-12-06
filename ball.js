@@ -8,8 +8,8 @@ class Ball {
         this.boardWidth = this.board.getBoundingClientRect().width
         this.boardHeight = this.board.getBoundingClientRect().height
 
-        this.directionY = Math.random() * 2 - 1
-        this.directionX = Math.random() * 2 - 1
+        this.directionY = (Math.random() * 3 + 1)
+        this.directionX = (Math.random() * 3 + 1)
 
         this.paddle = document.getElementById('paddle');
         this.left = 8
@@ -24,22 +24,25 @@ class Ball {
         this.top += this.directionY;
         this.left += this.directionX;
 
+
         if (this.left > this.boardWidth - 64 ||
             this.left <= 0) {
-        this.directionX = -this.directionX
+            this.directionX = -this.directionX
         }
-      
-        if (this.top >= this.boardHeight - 64 ||
-            this.top <= 0) {
-        this.directionY = -this.directionY
+
+        if (this.top <= 0) {
+            this.directionY = -this.directionY
         }
-        console.log(this);
+        //gameover
+        if (this.top >= this.boardHeight - 64) {
+            this.directionY = -this.directionY
+        }
+
         this.updatePosition()
     }
     updatePosition() {
         this.element.style.left = `${this.left}px`
         this.element.style.top = `${this.top}px`
-        console.log(this);
     }
 
     didCollidePaddle(paddle) {
@@ -63,9 +66,9 @@ class Ball {
         const ballRect = this.element.getBoundingClientRect()
         const boardRect = this.board.getBoundingClientRect()
 
-    if (
+        if (
             //checking if outside of the board
-         //   ballRect.bottom > boardRect.bottom ||
+            //   ballRect.bottom > boardRect.bottom ||
             ballRect.right >= boardRect.right ||
             ballRect.left <= boardRect.left ||
             ballRect.top <= boardRect.top

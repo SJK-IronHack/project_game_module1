@@ -1,4 +1,9 @@
+@font-face {
+  font-family: "MaisonNeue";
+  src: url(/MaisonNeue-Book.woff);
+}
 body {
+  font-family: "MaisonNeue";
   width: 100vw;
   height: 100vh;
   margin: 0px;
@@ -9,20 +14,31 @@ body {
   justify-content: flex-start;
   flex-shrink: 0;
 }
+body h1 {
+  font-size: 2.6rem;
+  color: #EC2E53;
+  color: #EC2E53;
+}
+body #stats {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-around;
+  width: 90vw;
+  font-size: 32px;
+  background: var(--BackgroundGlass, linear-gradient(112deg, rgba(239, 239, 239, 0.6) 8.14%, rgba(239, 239, 239, 0.08) 95.69%), rgba(245, 245, 245, 0.4));
+  box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.6) inset;
+  -webkit-backdrop-filter: blur(42.5px);
+          backdrop-filter: blur(42.5px);
+  border-radius: 24px;
+  border: 1px solid #EC2E53;
+}
 body #game-container {
   margin: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-}
-body #game-container #stats {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-around;
-  width: 100%;
-  font-size: 32px;
 }
 body #game-container .board {
   position: relative;
@@ -32,16 +48,16 @@ body #game-container .board {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  border-radius: 24px;
-  border: 1px solid #EC2E53;
   background: var(--BackgroundGlass, linear-gradient(112deg, rgba(239, 239, 239, 0.6) 8.14%, rgba(239, 239, 239, 0.08) 95.69%), rgba(245, 245, 245, 0.4));
   box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.6) inset;
   -webkit-backdrop-filter: blur(42.5px);
           backdrop-filter: blur(42.5px);
+  border-radius: 24px;
+  border: 1px solid #EC2E53;
 }
 body #game-intro {
   margin: 8px;
-  width: 100%;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,10 +71,17 @@ body button {
   border-radius: 24px;
   border: 1px solid #EC2E53;
   background: var(--BackgroundGlass, linear-gradient(112deg, rgba(239, 239, 239, 0.6) 8.14%, rgba(239, 239, 239, 0.08) 95.69%), rgba(245, 245, 245, 0.4));
-  /* Blur */
   box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.6);
   -webkit-backdrop-filter: blur(42.5px);
           backdrop-filter: blur(42.5px);
+  border-radius: 24px;
+  border: 1px solid #EC2E53;
+}
+body #start-button {
+  display: block;
+}
+body #restart-button {
+  display: none;
 }
 body #ball {
   position: absolute;
@@ -67,11 +90,13 @@ body #ball {
   height: 48px;
   border-radius: 48px;
   border: 1px solid #EC2E53;
-  background: #EC2E53;
-  /* Blur */
+  background: var(--BackgroundGlass, linear-gradient(112deg, rgba(239, 239, 239, 0.6) 8.14%, rgba(239, 239, 239, 0.08) 95.69%), rgba(245, 245, 245, 0.4));
   box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.6);
   -webkit-backdrop-filter: blur(42.5px);
           backdrop-filter: blur(42.5px);
+  border-radius: 24px;
+  border: 1px solid #EC2E53;
+  background: #EC2E53;
 }
 body #paddle {
   position: absolute;
@@ -80,11 +105,12 @@ body #paddle {
   height: 24px;
   width: 170px;
   flex-shrink: 0;
-  border-radius: 24px;
-  border: 1px solid #EC2E53;
-  background: #EC2E53;
-  /* Blur */
+  background: var(--BackgroundGlass, linear-gradient(112deg, rgba(239, 239, 239, 0.6) 8.14%, rgba(239, 239, 239, 0.08) 95.69%), rgba(245, 245, 245, 0.4));
   box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.6);
   -webkit-backdrop-filter: blur(42.5px);
           backdrop-filter: blur(42.5px);
+  border-radius: 24px;
+  border: 1px solid #EC2E53;
+  border: 1px solid #EC2E53;
+  background: #EC2E53;
 }/*# sourceMappingURL=styles.css.map */

@@ -18,12 +18,10 @@ restartButton.addEventListener('click', function () {
 document.addEventListener('keydown', event => {
 
   if (event.code === 'ArrowLeft') {
-    console.log('Go left !')
-    game.player.directionX = -1
+    game.player.directionX =  (Math.random() * 10 +1)
   }
   if (event.code === 'ArrowRight'){
-    console.log('Go right !')
-    game.player.directionX = 1
+    game.player.directionX =  -(Math.random() * 10 +1)
   }
 })
 

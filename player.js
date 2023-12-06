@@ -3,7 +3,7 @@ let board = document.querySelector('.board');
 
 let paddle_coord = paddle.getBoundingClientRect();
 let board_coord = board.getBoundingClientRect();
-this.directionY = 1
+this.directionX = Math.random() * 2 +1
 
 // player.js
 class Player {

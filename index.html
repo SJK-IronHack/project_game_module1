@@ -8,28 +8,25 @@
   </head>
 
   <body>
-    <div id="game-intro">
-      <button type="button" id="start-button">
-        <h1 class="message">Press Enter to Play Pong</h1>
-      </button>
+    <h1 class="message" id="message">Press Enter to Play PingPong</h1>
+    <div id="game-start">
+    </div>
+    <div id="stats">
+      <p>Level: <span id="level">1</span></p>
+      <p>Score: <span id="score">0</span></p>
+      <p>Lives: <span id="lives">3</span></p>
     </div>
     <div id="game-container">
-
-      <div id="stats">
-        <p>Statistics:</p>
-        <p>Score: <span id="score">0</span></p>
-        <p>Lives: <span id="lives">3</span></p>
-      </div>
-      
       <div class="board">
         <div id="ball"></div>
         <div  id="paddle"></div>
       </div>
     </div>
     <div id="game-end">
-      <h1>Game Over</h1>
-      <button id="restart-button"><h1 class="message">Restart</h1></button>
     </div>
+
+    <button id="start-button"><h1 class="message">Enter the Game</h1></button>
+    <button id="restart-button"><h1 class="message">Restart the Game</h1></button>
 
     <script src="/ball.js"></script>
     <script src="/player.js"></script>
