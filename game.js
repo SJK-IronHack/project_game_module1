@@ -75,8 +75,9 @@ gameLoop() {
 
     if (this.isGameOver) {
         this.messageHeadline.innerText = "Game Over"
-        this.gameScreen.style.display = 'none'
         this.endScreen.style.display = 'block'
+        this.overlayElement.style.display = 'block'
+
         this.ball.element.remove()
     }
 

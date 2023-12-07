@@ -100,9 +100,18 @@ body #game-container .board {
     justify-content: flex-start;
     align-items: flex-start;
     width: 70vw;
-    max-height: 70vh;
-    position: relative;
+    height: 70vw;
+    position: absolute;
     margin: 8px;
+    background-color: #EC2E53;
+    border-radius: 50%;
+    box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.6);
+    -webkit-backdrop-filter: blur(42.5px);
+            backdrop-filter: blur(42.5px);
+    border: 1px solid #EC2E53;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 @media (min-width: 1250px) {
@@ -112,10 +121,19 @@ body #game-container .board {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70vw;
-    height: 60vh;
-    position: relative;
+    width: 50vh;
+    height: 50vh;
+    position: absolute;
     margin: 8px;
+    background-color: #EC2E53;
+    border-radius: 50%;
+    box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.6);
+    -webkit-backdrop-filter: blur(42.5px);
+            backdrop-filter: blur(42.5px);
+    border: 1px solid #EC2E53;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 @media (max-width: 1250px) {
@@ -126,8 +144,8 @@ body #game-container .board {
     justify-content: flex-start;
     align-items: flex-start;
     width: 70vw;
-    height: 70vh;
-    position: relative;
+    height: 70vw;
+    position: absolute;
     margin: 8px;
     background-color: #EC2E53;
     border-radius: 50%;
@@ -135,6 +153,9 @@ body #game-container .board {
     -webkit-backdrop-filter: blur(42.5px);
             backdrop-filter: blur(42.5px);
     border: 1px solid #EC2E53;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 @media (min-width: 1250px) {
@@ -144,9 +165,9 @@ body #game-container .board {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 70vh;
-    height: 70wh;
-    position: relative;
+    width: 50vh;
+    height: 50wh;
+    position: absolute;
     margin: 8px;
     background-color: #EC2E53;
     border-radius: 50%;
@@ -154,13 +175,10 @@ body #game-container .board {
     -webkit-backdrop-filter: blur(42.5px);
             backdrop-filter: blur(42.5px);
     border: 1px solid #EC2E53;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-}
-body .circle {
-  z-index: 10000;
-  width: 100%;
-  padding-bottom: 100%;
-  /* Maintain a 1:1 aspect ratio (height = width) */
 }
 body button {
   width: 90vw;
