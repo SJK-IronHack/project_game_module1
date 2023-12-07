@@ -4,21 +4,32 @@
 }
 body {
   font-family: "MaisonNeue";
-  height: 100vh;
+  height: 95vh;
   margin: 0px;
   fill: #D9D9D9;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  flex-shrink: 0;
+  justify-content: space-between;
+  flex-shrink: 1;
 }
-body h1 {
-  font-family: "MaisonNeue";
-  font-size: 2.6rem;
-  color: #EC2E53;
-  color: #EC2E53;
-  z-index: 10000;
+@media (min-width: 1250px) {
+  body h1 {
+    font-family: "MaisonNeue";
+    font-size: 2.6rem;
+    color: #EC2E53;
+    color: #EC2E53;
+    z-index: 10000;
+  }
+}
+@media (max-width: 1250px) {
+  body h1 {
+    font-family: "MaisonNeue";
+    font-size: 2.3rem;
+    color: #EC2E53;
+    color: #EC2E53;
+    z-index: 10000;
+  }
 }
 body #stats {
   z-index: 10000;
@@ -59,18 +70,17 @@ body #game-container .board {
   border: 1px solid #EC2E53;
 }
 body #game-start {
-  position: absolute;
   z-index: 10000;
-  display: block;
-  height: 70vw;
-  width: 70vw;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 70vw;
+  max-height: 70vh;
+  width: 100%;
+  height: 100%;
+  position: relative;
   margin: 8px;
-  background-color: #EC2E53;
-  border-radius: 100%;
-  box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.6);
-  -webkit-backdrop-filter: blur(42.5px);
-          backdrop-filter: blur(42.5px);
-  border: 1px solid #EC2E53;
 }
 body #game-end {
   z-index: 10000;
@@ -78,11 +88,20 @@ body #game-end {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 70vw;
-  width: 70vw;
+  max-width: 70vw;
+  max-height: 70vh;
+  width: 100%;
+  height: 100%;
+  position: relative;
   margin: 8px;
+}
+body .circle {
+  width: 100%;
+  padding-bottom: 100%;
+  /* Maintain a 1:1 aspect ratio (height = width) */
   background-color: #EC2E53;
-  border-radius: 70vw;
+  border-radius: 50%;
+  position: absolute;
   box-shadow: -4px -4px 4px 0px rgba(236, 46, 83, 0.6);
   -webkit-backdrop-filter: blur(42.5px);
           backdrop-filter: blur(42.5px);
@@ -147,8 +166,10 @@ body #paddle {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(255, 255, 255); /* Adjust the color and opacity as needed */
-  z-index: 1; /* Set a higher z-index to make sure it covers everything underneath */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  /* Adjust the color and opacity as needed */
+  z-index: 1;
+  /* Set a higher z-index to make sure it covers everything underneath */
 }/*# sourceMappingURL=styles.css.map */
